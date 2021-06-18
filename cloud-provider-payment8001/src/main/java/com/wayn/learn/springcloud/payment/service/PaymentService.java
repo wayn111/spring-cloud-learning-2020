@@ -1,6 +1,6 @@
 package com.wayn.learn.springcloud.payment.service;
 
-import com.wayn.learn.springcloud.payment.entity.Payment;
+import com.wayn.learn.springcloud.commons.entity.Payment;
 import org.apache.ibatis.annotations.Param;
 
 public interface PaymentService {

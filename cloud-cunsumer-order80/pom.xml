@@ -11,6 +11,12 @@
 
     <artifactId>cloud-cunsumer-order80</artifactId>
     <dependencies>
+        <dependency>
+            <groupId>com.wayn.learn.springcloud</groupId>
+            <artifactId>cloud-api-commons</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

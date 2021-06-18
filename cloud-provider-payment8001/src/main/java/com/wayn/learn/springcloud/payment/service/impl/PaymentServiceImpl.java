@@ -1,7 +1,7 @@
 package com.wayn.learn.springcloud.payment.service.impl;
 
+import com.wayn.learn.springcloud.commons.entity.Payment;
 import com.wayn.learn.springcloud.payment.dao.PaymentDao;
-import com.wayn.learn.springcloud.payment.entity.Payment;
 import com.wayn.learn.springcloud.payment.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.wayn.learn.springcloud.payment.config;
+package com.wayn.learn.springcloud.order.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

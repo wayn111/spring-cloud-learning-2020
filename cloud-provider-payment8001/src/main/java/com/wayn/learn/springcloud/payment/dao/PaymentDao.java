@@ -1,7 +1,7 @@
 package com.wayn.learn.springcloud.payment.dao;
 
-import com.wayn.learn.springcloud.payment.entity.Payment;
-import org.apache.ibatis.annotations.Mapper;
+
+import com.wayn.learn.springcloud.commons.entity.Payment;
 
 public interface PaymentDao {
     int deleteByPrimaryKey(Long id);

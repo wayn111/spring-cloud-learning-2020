@@ -1,4 +1,4 @@
-package com.wayn.learn.springcloud.payment.entity;
+package com.wayn.learn.springcloud.commons.entity;
 
 import lombok.Data;
 

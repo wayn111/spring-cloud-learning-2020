@@ -3,4 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud-consumer-order
+    name: cloud-cunsumer-order80
+  devtools:
+    livereload:
+      port: 35730
