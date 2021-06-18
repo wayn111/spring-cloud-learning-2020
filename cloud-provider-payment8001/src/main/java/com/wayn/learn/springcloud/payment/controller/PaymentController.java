@@ -2,7 +2,7 @@ package com.wayn.learn.springcloud.payment.controller;
 
 import com.wayn.learn.springcloud.commons.entity.CommonResult;
 import com.wayn.learn.springcloud.commons.entity.Payment;
-import com.wayn.learn.springcloud.payment.service.service.PaymentService;
+import com.wayn.learn.springcloud.payment.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
