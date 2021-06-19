@@ -1,7 +1,7 @@
-package com.wayn.learn.springcloud.feign.controller;
+package com.wayn.learn.springcloud.feign.order.controller;
 
 import com.wayn.learn.springcloud.commons.entity.CommonResult;
-import com.wayn.learn.springcloud.feign.service.PaymentFeignService;
+import com.wayn.learn.springcloud.feign.order.service.PaymentFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
