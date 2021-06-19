@@ -38,7 +38,8 @@ public class PaymentController {
     }
 
     @GetMapping(value = "/payment/get/{id}")
-    public CommonResult getPaymentById(@PathVariable("id") Long id) {
+    public CommonResult getPaymentById(@PathVariable("id") Long id) throws InterruptedException {
+        Thread.sleep(3000);
         Payment payment = paymentService.getPaymentById(id);
         log.info("*****查询结果：" + payment);
         if (payment != null) {  //说明有数据，能查询成功
