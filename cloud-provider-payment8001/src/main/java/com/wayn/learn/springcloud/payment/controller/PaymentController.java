@@ -48,6 +48,11 @@ public class PaymentController {
         }
     }
 
+    @GetMapping(value = "/payment/lbGet")
+    public CommonResult lbGet() {
+        return new CommonResult(200, port);
+    }
+
     /**
      * 服务自我发现
      *

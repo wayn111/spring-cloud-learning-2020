@@ -29,6 +29,11 @@ public class PaymentController {
         }
     }
 
+    @GetMapping(value = "/payment/lbGet")
+    public CommonResult lbGet() {
+        return new CommonResult(200, port);
+    }
+
     @GetMapping(value = "/payment/get/{id}")
     public CommonResult getPaymentById(@PathVariable("id") Long id) {
         Payment payment = paymentService.getPaymentById(id);
