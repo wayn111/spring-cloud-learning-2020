@@ -19,7 +19,7 @@ spring:
           default-label: main
       # 配置默认分支
       label: main
-  # 配置rabbitmq，修改完配置文件后，发送 curl -X POST "http://localhost:3344/actuator/bug-refresh" 通过给confiServer发送消息让configClient刷新配置信息
+  # 配置rabbitmq，修改完配置文件后，发送 curl -X POST "http://localhost:3344/actuator/bug-refresh" 通过给configServer发送消息让configClient都刷新配置信息
   rabbitmq:
     host: wayn.ltd
     port: 5672
@@ -36,4 +36,4 @@ management:
   endpoints:
     web:
       exposure:
-        exclude: 'bus-refresh'
+        include: "*"
