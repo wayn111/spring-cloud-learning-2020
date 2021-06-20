@@ -4,23 +4,21 @@ import cn.hutool.core.util.IdUtil;
 import com.wayn.learn.springcloud.stream.provider.service.ProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.MessageBuilder;
-import org.springframework.stereotype.Service;
-
-import javax.xml.transform.Source;
 
 @EnableBinding(Source.class)
-@Service
 public class ProviderServiceImpl implements ProviderService {
 
+    //消息发送管道
     @Autowired
-    private MessageChannel messageChannel;
+    private MessageChannel output;
 
     @Override
-    public void send() {
+    public boolean send() {
         String payload = IdUtil.fastSimpleUUID();
-        messageChannel.send(MessageBuilder.withPayload(payload).build());
         System.out.println("serial:" + payload);
+        return output.send(MessageBuilder.withPayload(payload).build());
     }
 }
