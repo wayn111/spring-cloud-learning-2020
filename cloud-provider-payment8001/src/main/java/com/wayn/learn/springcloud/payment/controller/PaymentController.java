@@ -71,4 +71,9 @@ public class PaymentController {
         }
         return services;
     }
+
+    @GetMapping(value = "/payment/zipkin")
+    public String zipkin() {
+        return "paymentZipkin";
+    }
 }

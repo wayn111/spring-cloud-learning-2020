@@ -1,4 +1,4 @@
-package com.wayn.learn.springcloud.order.config;
+package com.wayn.learn.springcloud.nacos.order83.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
