@@ -81,6 +81,18 @@ public class FlowLimitController {
     }
 
     /**
+     * testG 降级RT
+     *
+     * @return
+     */
+    @GetMapping("/testH")
+    public String testH() throws InterruptedException {
+        Thread.sleep(1000);
+        log.info("------testH RT");
+        return "------testH RT";
+    }
+
+    /**
      * 热点key限制
      *
      * @param p1
