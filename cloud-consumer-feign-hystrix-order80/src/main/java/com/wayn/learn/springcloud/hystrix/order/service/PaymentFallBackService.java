@@ -1,7 +1,7 @@
 package com.wayn.learn.springcloud.hystrix.order.service;
 
 import org.springframework.stereotype.Component;
-1import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Component
 public class PaymentFallBackService implements PaymentHystrixService {
