@@ -5,7 +5,10 @@ import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.wayn.learn.springcloud.commons.entity.CommonResult;
 import com.wayn.learn.springcloud.commons.entity.Payment;
+import com.wayn.learn.springcloud.order84.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +24,8 @@ public class CircleBreakerController {
 
     @Resource
     private RestTemplate restTemplate;
-
+    @Autowired
+    private PaymentService paymentService;
 
     @RequestMapping("/consumer/fallback/{id}")
     //@SentinelResource(value = "fallback") //没有配置
@@ -47,13 +51,19 @@ public class CircleBreakerController {
         return new CommonResult<>(444, "兜底异常handlerFallback,exception内容  " + e.getMessage(), payment);
     }
 
+
+    // openfeign
+
     //blockHandler
     public CommonResult blockHandler(@PathVariable Long id, BlockException blockException) {
         Payment payment = new Payment(id, "null");
         return new CommonResult<>(445, "blockHandler-sentinel限流,无此流水: blockException  " + blockException.getMessage(), payment);
     }
 
-
+    @GetMapping(value = "/consumer/paymentSQL/{id}")
+    public CommonResult paymentSQL(@PathVariable Long id) {
+        return paymentService.paymentSQL(id);
+    }
 }
 
 
