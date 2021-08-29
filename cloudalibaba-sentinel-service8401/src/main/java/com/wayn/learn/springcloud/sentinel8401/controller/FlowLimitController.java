@@ -81,7 +81,7 @@ public class FlowLimitController {
     }
 
     /**
-     * testG 降级RT
+     * testH 降级RT
      *
      * @return
      */
@@ -90,6 +90,18 @@ public class FlowLimitController {
         Thread.sleep(1000);
         log.info("------testH RT");
         return "------testH RT";
+    }
+
+    /**
+     * testI 降级异常比例
+     *
+     * @return
+     */
+    @GetMapping("/testI")
+    public String testI() {
+        log.info("------testI");
+        int i = 10 / 0;
+        return "------testI";
     }
 
     /**
