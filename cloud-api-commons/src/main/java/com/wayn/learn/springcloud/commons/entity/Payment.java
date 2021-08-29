@@ -1,6 +1,8 @@
 package com.wayn.learn.springcloud.commons.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -9,6 +11,8 @@ import java.io.Serializable;
  * @author
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Payment implements Serializable {
     private Long id;
 
